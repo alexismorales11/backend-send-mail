@@ -30,17 +30,17 @@ const transporterOutlook = nodemailer.createTransport({
     secure: false,
     auth: {
       type: 'login',
-      user: "pemoralespa@outlook.es",
-      pass: `${process.env.PASS_OUTLOOK}`,
+      user: "itservices@paloblanco.com",
+      pass: `${process.env.PASS_OUTLOOK_IT_S}`,
     },
   });
 
 // Opciones del correo electrónico
 const mailOptions = {
-  from: "pemoralespa@outlook.es",
-  to: "selvinmoralesoficial@gmail.com",
+  from: "itservices@paloblanco.com",
+  to: "smorales@paloblanco.com, selvinmoralesoficial@gmail.com",
   subject: "Asunto del correo",
-  hmtl: "Contenido del correo",
+  html: `<h1>Holaaa</h1>`,
 };
 
 // Envío del correo electrónico
