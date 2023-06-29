@@ -25,15 +25,15 @@ const transporterGmail = nodemailer.createTransport({
 });
 
 const transporterOutlook = nodemailer.createTransport({
-    host: "smtp.office365.com",
-    port: 587,
-    secure: false,
-    auth: {
-      type: 'login',
-      user: "itservices@paloblanco.com",
-      pass: `${process.env.PASS_OUTLOOK_IT_S}`,
-    },
-  });
+  host: "smtp.office365.com",
+  port: 587,
+  secure: false,
+  auth: {
+    type: "login",
+    user: "itservices@paloblanco.com",
+    pass: `${process.env.PASS_OUTLOOK_IT_S}`,
+  },
+});
 
 // Opciones del correo electrónico
 const mailOptions = {
@@ -51,7 +51,6 @@ transporterOutlook.sendMail(mailOptions, (error, info) => {
     console.log("Correo electrónico enviado:", info.response);
   }
 });
-
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
